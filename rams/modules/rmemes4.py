@@ -204,8 +204,52 @@ async def _(typew):
                      "░░░░░░░░░░░░░░░░░░░\n", reply_to=typew.reply_to_msg_id)
     await typew.delete()
 
+@ram_cmd(pattern="supr(?: |$)(.*)")
+async def _(typew):
+    await typew.client.send_message(
+        typew.chat_id, "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⡿⠋⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⠀⠀⣠⣾⣿⡿⠋⠀⠀⠉⠻⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⠀⠀⣿⣿⣿⠃⠀⠀⣀⡀⠀⢹⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⡄⠀⠙⠻⠋⠀⠀⣸⣿⣿⠀⠀⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⣰⣿⣿⠟⠀⢠⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⡿⠛⠛⠒⠶⠾⢿⣿⣿⣷⣄⣾⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⠁⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⠀⢰⣿⣿⣷⣶⣦⣼⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⡀⠀⠙⠻⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⢿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⠀⠀⠀⠉⠉⠛⠛⠛⠶⢶⣤⣼⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣦⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⠁⠀⣾⣿⣷⡄⠀⢼⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⠀⠀⢿⣿⣿⡿⠀⠈⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⣇⠀⠀⠉⠋⠁⠀⢠⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⠿⢷⣤⣀⣀⣀⣠⣾⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⠀⠀⠀⠈⠉⠉⠛⢻⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⣶⣦⣤⣤⣀⠀⠀⢸⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠹⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⡿⠛⠉⠉⠙⠻⣀⣀⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⠁⠀⣀⡀⠀⠀⠈⢿⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⠀⢸⣿⡇⠀⣷⡀⠘⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⡄⠈⢻⡇⠀⡿⠃⠀⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⣷⣄⢸⡇⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⠀⠉⠉⠑⠒⠲⠿⢿⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⣤⣄⣀⡀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⢺⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⠀⠀⠉⠉⠙⠋⠀⠀⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⣤⣤⣀⣀⡀⠀⠀⣰⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣷⠀⢹⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⠀⠀⠀⠉⠉⠉⠀⠀⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⣶⣤⣤⣀⣀⣀⣀⣰⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⡟⠉⠀⠀⠈⠙⢿⣿⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⠀⢀⣤⡄⠀⡀⠀⢹⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⠀⢸⣿⡇⠀⣿⡄⠈⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⡆⠀⢹⡇⠀⠟⠁⢀⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⣿⣦⣸⡇⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿\n"
+                    "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n", reply_to=typew.reply_to_msg_id)
+    await typew.delete()
 
-@ram_cmd(pattern="ya(?: |$)(.*)")
+
+@ram_cmd(pattern="y(?: |$)(.*)")
 async def _(typew):
     await typew.client.send_message(
         typew.chat_id, "‡‡‡‡‡‡‡‡‡‡‡‡▄▄▄▄\n"
@@ -221,6 +265,24 @@ async def _(typew):
                      "▓▓▓▓▓▓█‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡█\n"
                      "▓▓▓▓▓▓█████‡‡‡‡‡‡‡‡‡‡‡‡██\n"
                      "█████‡‡‡‡‡‡‡██████████\n", reply_to=typew.reply_to_msg_id)
+    await typew.delete()
+
+@ram_cmd(pattern="g(?: |$)(.*)")
+async def _(typew):
+    await typew.client.send_message(
+        typew.chat_id, "███████▄▄███████████▄\n"
+                    "▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n"
+                    "▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n"
+                    "▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n"
+                    "▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n"
+                    "▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n"
+                    "▓▓▓▓▓▓███░░░░░░░░░░░░█\n"
+                    "██████▀░░█░░░░██████▀\n"
+                    "░░░░░░░░░█░░░░█\n"
+                    "░░░░░░░░░░█░░░█\n"
+                    "░░░░░░░░░░░█░░█\n"
+                    "░░░░░░░░░░░█░░█\n"
+                    "░░░░░░░░░░░░▀▀\n", reply_to=typew.reply_to_msg_id)
     await typew.delete()
 
 @ram_cmd(pattern="tank(?: |$)(.*)")
@@ -256,70 +318,6 @@ async def _(typew):
                      "╨━━┗┛┗┛━━┗┛┗┛━━┻\n", reply_to=typew.reply_to_msg_id)
     await typew.delete()
 
-@ram_cmd(pattern="gbn(?: |$)(.*)")
-async def _(gbon):
-    typew = await edit_or_reply(gbon, "`Kita Gban Jamet duls!!...`")
-    sleep(1)
-    await typew.edit("`Memulai global banned...✅`")
-    sleep(2)
-    await typew.edit("`Proses Global banned...✅`")
-    sleep(3)
-    await typew.edit(f"╭✠╼━━━━━━❖━━━━━━━✠\n┣• **TUAN:** `{owner}`\n┣• **PIBOONG:** [INSTAGRAM]({IG_ALIVE})\n┣• **Aksi:** `PROMOSI`\n╰✠╼━━━━━━❖━━━━━━━✠")
-
-@ram_cmd(pattern="gkck(?: |$)(.*)")
-async def _(gkack):
-    typew = await edit_or_reply(gkack, "**Proses global kick Si ngentot!!...**")
-    sleep(3)
-    await typew.edit("__mengeluarkan dari (1) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (2) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (3) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (4) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (5) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (6) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (7) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (8) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (9) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (10) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (11) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (12) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (13) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (14) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (15) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (16) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (17) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (18) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (19) Group__")
-    sleep(1)
-    await typew.edit("__mengeluarkan dari (20) Group__")
-    sleep(2)
-    await typew.edit("**Pengguna berhasil di kick global dari (20) obrolan dalam grup.**")
-
-
-@ram_cmd(pattern="gmt(?: |$)(.*)")
-async def _(gmyut):
-    typew = await edit_or_reply(gmyut, "`Memulai proses Global mute...`")
-    sleep(3)
-    await typew.edit("`Pengguna berhasil di Global mute...!`")
-
-
 @ram_cmd(pattern="tolol(?: |$)(.*)")
 async def _(tolol):
     typew = await edit_or_reply(tolol, "`TOLOL...`")
@@ -341,29 +339,6 @@ async def _(tolol):
     await typew.edit("`TOLOL`")
     await typew.edit("`TOLOL!!!!`")
 
-
-@ram_cmd(pattern="uasu(?: |$)(.*)")
-async def _(uasuh):
-    typew = await edit_or_reply(uasuh, "`Memeriksa dyno heroku anda...`")
-    sleep(1)
-    await typew.edit("✨")
-    sleep(2)
-    await typew.edit(f"𝗜𝗡𝗙𝗢 𝗞𝗘𝗞𝗨𝗔𝗧𝗔𝗡!! {REPO_NAME}\n\n"
-                     "╭✠╼━━━━━━❖━━━━━━━✠╮\n"
-                     "┣•𝗣𝗘𝗡𝗚𝗚𝗨𝗡𝗔𝗔𝗡 𝗦𝗔𝗔𝗧 𝗜𝗡𝗜 :\n"
-                     "┣• ▸ 999 ᴊᴀᴍ - 999 ᴍᴇɴɪᴛ.\n" 
-                     "┣• ▸ ᴘʀᴇꜱᴇɴᴛᴀꜱᴇ : 999%\n" 
-                     "╰✠╼━━━━━━❖━━━━━━━✠╯\n"
-                     "▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n"
-                     "╭✠╼━━━━━━❖━━━━━━━✠╮\n"
-                     "┣•𝗣𝗘𝗡𝗚𝗚𝗨𝗡𝗔𝗔𝗡 𝗕𝗨𝗟𝗔𝗡 𝗜𝗡𝗜 :\n"
-                     "┣• ▸ `999999` ᴊᴀᴍ - `999999` ᴍᴇɴɪᴛ.\n"
-                     "┣• ▸ ᴘʀᴇꜱᴇɴᴛᴀꜱᴇ : 1000%.\n"
-                     "╰✠╼━━━━━━❖━━━━━━━✠╯\n"
-                     f"𝗣𝗘𝗠𝗜𝗟𝗜𝗞  : {owner}\n"
-                     f"**•JOIN•** : [MY GROUP]({GROUP_LINK})")
-
-
 @ram_cmd(pattern="kickme(?: |$)(.*)")
 async def _(kikem):
     typew = await edit_or_reply(kikem, f"`{owner}, Saat Nya Pergi...`")
@@ -373,9 +348,9 @@ async def _(kikem):
 
 @ram_cmd(pattern="gi(?: |$)(.*)")
 async def _(igehy):
-    typew = await edit_or_reply(igehy, "**Mutualan Yukkk!...**")
-    sleep(2)
-    await typew.edit(f"𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌= [𝐓𝐄𝐊𝐀𝐍]({IG_ALIVE})")
+    typew = await edit_or_reply(igehy, "**Kenalan Sama Owner Yukkk!...**")
+    sleep(1)
+    await typew.edit(f"𝐊𝐀𝐍𝐄 𝐆𝐀𝐍𝐓𝐄𝐍𝐆= [𝐓𝐄𝐊𝐀𝐍](https://t.me/abange)")
 
 
 @ram_cmd(pattern="fck(?: |$)(.*)")
@@ -391,9 +366,34 @@ async def _(event):
     await typew.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /\n          \\                _.•´\n            \\              (")
     await typew.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /\n          \\                _.•´\n            \\              (\n              \\  ")
 
+@ram_cmd(pattern="ipong(?: |$)(.*)")
+async def _(event):
+    typew = await edit_or_reply(event, "ipong. . .")
+    await typew.edit("🎛⬜️⬜️")
+    await typew.edit("🎛⬜️⬜️\n⬜️⬜️⬜️")
+    await typew.edit("🎛⬜️⬜️\n⬜️⬜️⬜️\n⬜️🍎⬜️")
+    await typew.edit("🎛⬜️⬜️\n⬜️⬜️⬜️\n⬜️🍎⬜️\n⬜️⬜️⬜️")
+    await typew.edit("🎛⬜️⬜️\n⬜️⬜️⬜️\n⬜️🍎⬜️\n⬜️⬜️⬜️\n⬜️⬜️⬜️")
+    await typew.edit("🎛⬜️⬜️\n⬜️⬜️⬜️\n⬜️🍎⬜️\n⬜️⬜️⬜️\n⬜️⬜️⬜️\niPong 16 Pro Mag")
+
+@ram_cmd(pattern="luv(?: |$)(.*)")
+async def _(event):
+    typew = await edit_or_reply(event, ".｡ﾟﾟ･｡･ﾟﾟ｡")
+    await typew.edit(".｡ﾟﾟ･｡･ﾟﾟ｡\n         ﾟ。       ｡ ﾟ")
+    await typew.edit(".｡ﾟﾟ･｡･ﾟﾟ｡\n         ﾟ。       ｡ ﾟ\n             ﾟ･｡･ﾟ")
+    await typew.edit(".｡ﾟﾟ･｡･ﾟﾟ｡\n         ﾟ。       ｡ ﾟ\n             ﾟ･｡･ﾟ\n       ︵               ︵")
+    await typew.edit(".｡ﾟﾟ･｡･ﾟﾟ｡\n         ﾟ。       ｡ ﾟ\n             ﾟ･｡･ﾟ\n       ︵               ︵\n    (        ╲       /       /")
+    await typew.edit(".｡ﾟﾟ･｡･ﾟﾟ｡\n         ﾟ。       ｡ ﾟ\n             ﾟ･｡･ﾟ\n       ︵               ︵\n    (        ╲       /       /\n           ╲          ╲  /")
+    await typew.edit(".｡ﾟﾟ･｡･ﾟﾟ｡\n         ﾟ。       ｡ ﾟ\n             ﾟ･｡･ﾟ\n       ︵               ︵\n    (        ╲       /       /\n           ╲          ╲  /\n          ╭ ‌   ╲           ╲")
+    await typew.edit(".｡ﾟﾟ･｡･ﾟﾟ｡\n         ﾟ。       ｡ ﾟ\n             ﾟ･｡･ﾟ\n       ︵               ︵\n    (        ╲       /       /\n           ╲          ╲  /\n          ╭ ‌   ╲           ╲\n     ╭ ‌   ╲        ╲       ﾉ")
+    await typew.edit(".｡ﾟﾟ･｡･ﾟﾟ｡\n         ﾟ。       ｡ ﾟ\n             ﾟ･｡･ﾟ\n       ︵               ︵\n    (        ╲       /       /\n           ╲          ╲  /\n          ╭ ‌   ╲           ╲\n     ╭ ‌   ╲        ╲       ﾉ\n╭ ‌   ╲        ╲         ╱")
+    await typew.edit(".｡ﾟﾟ･｡･ﾟﾟ｡\n         ﾟ。       ｡ ﾟ\n             ﾟ･｡･ﾟ\n       ︵               ︵\n    (        ╲       /       /\n           ╲          ╲  /\n          ╭ ‌   ╲           ╲\n     ╭ ‌   ╲        ╲       ﾉ\n╭ ‌   ╲        ╲         ╱\n ╲       ╲          ╱")
+    await typew.edit(".｡ﾟﾟ･｡･ﾟﾟ｡\n         ﾟ。       ｡ ﾟ\n             ﾟ･｡･ﾟ\n       ︵               ︵\n    (        ╲       /       /\n           ╲          ╲  /\n          ╭ ‌   ╲           ╲\n     ╭ ‌   ╲        ╲       ﾉ\n╭ ‌   ╲        ╲         ╱\n ╲       ╲          ╱\n      ╲         ╱")
+    await typew.edit(".｡ﾟﾟ･｡･ﾟﾟ｡\n         ﾟ。       ｡ ﾟ\n             ﾟ･｡･ﾟ\n       ︵               ︵\n    (        ╲       /       /\n           ╲          ╲  /\n          ╭ ‌   ╲           ╲\n     ╭ ‌   ╲        ╲       ﾉ\n╭ ‌   ╲        ╲         ╱\n ╲       ╲          ╱\n      ╲         ╱\n          ︶")
+
 CMD_HELP.update({
     "memes7":
-    f"`{cmd}bulan` ; `{cmd}hati` ; `{cmd}gbn` ; `{cmd}tolol` ; `{cmd}gmt`\
+    f"`{cmd}bulan` ; `{cmd}hati` ; `{cmd}tolol`\
     \nUsage: liat aja.\
     \n\n`{cmd}heli` ; `{cmd}tank` ; `{cmd}tembak`\n`{cmd}bundir`\
     \nUsage: liat sendiri."
@@ -401,11 +401,11 @@ CMD_HELP.update({
 
 CMD_HELP.update({
     "memes8":
-    f".y` ; `{cmd}uasu` ; `{cmd}gkck`\
-    \nUsage: jempol , Cek dyno & prank global kick\
-    \n\n`{cmd}tawa` ; `{cmd}oy` ; `{cmd}fck`\
-    \nUsage: ketawa lari , Nyuruh nimbrung , fvck & Coba sendiri.\
-    \n\n`{cmd}ular` ; `{cmd}babi` ; `{cmd}ajg`\
+    f".y` ; `.g` ; `{cmd}lul` ; `{cmd}luv`\
+    \nUsage: jempol.\
+    \n\n`{cmd}tawa` ; `{cmd}ipong` ; `{cmd}fck`\
+    \nUsage: ketawa lari , ipong pro mag , fvck.\
+    \n\n`{cmd}ular` ; `{cmd}supr` ; `{cmd}babi` ; `{cmd}ajg`\
     \nUsage: liat sendiri."
 })
 
