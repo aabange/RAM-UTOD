@@ -1267,6 +1267,16 @@ async def moon(event):
     except BaseException:
         return
 
+@bot.on(ram_cmd(outgoing=True, pattern=r"lul$"))
+async def lul(event):
+    deq = deque(list("😂🤣😂🤣😂🤣"))
+    try:
+        for x in range(35):
+            await sleep(0.1)
+            await event.edit("".join(deq))
+            deq.rotate(1)
+    except BaseException:
+        return
 
 @bot.on(ram_cmd(outgoing=True, pattern=r"waktu$"))
 async def moon(event):
@@ -1367,6 +1377,17 @@ async def earth(event):
 @bot.on(ram_cmd(outgoing=True, pattern="emo$"))
 async def earth(event):
     deq = deque(list("🙂😁😄😃😂🤣😭🐵🙊🙉🙈"))
+    try:
+        for x in range(32):
+            await sleep(0.1)
+            await event.edit("".join(deq))
+            deq.rotate(1)
+    except BaseException:
+        return
+
+@bot.on(ram_cmd(outgoing=True, pattern="muah$"))
+async def muah(event):
+    deq = deque(list("😗😙😚😚😘"))
     try:
         for x in range(32):
             await sleep(0.1)
@@ -1528,8 +1549,8 @@ async def typewriter(typew):
     elif textx:
         message = textx.text
     else:
-        return await typew.edit("`Berikan Sebuah Teks Untuk Type!`")
-    sleep_time = 0.03
+        return await typew.edit("`Berikan Sebuah Teks Untuk Animasi Type!`")
+    sleep_time = 0.02
     typing_symbol = "|"
     old_text = ""
     await typew.edit(typing_symbol)
@@ -1550,7 +1571,7 @@ async def leave(e):
                      "──▄▀█▄▄▄─────▄▀█▄▄▄\n"
                      "▄▀──█▄▄──────█─█▄▄\n"
                      "─▄▄▄▀──▀▄───▄▄▄▀──▀▄\n"
-                     "─▀───────▀▀─▀───────▀▀\n`Kabur Ah, Banyak Anak Haram disini, Awowkowkwk..`")
+                     "─▀───────▀▀─▀───────▀▀\n`Awowkowkwk Ngentod..`")
 
 
 @bot.on(ram_cmd(outgoing=True, pattern=r"fail$"))
@@ -1772,6 +1793,15 @@ async def gas(e):
         await e.edit("__🚑_________________")
         await e.edit("🚑___________________")
         await e.edit("_____________________")
+        await e.edit("___________________🚑")
+        await e.edit("________________🚑___")
+        await e.edit("______________🚑_____")
+        await e.edit("___________🚑________")
+        await e.edit("________🚑___________")
+        await e.edit("_____🚑______________")
+        await e.edit("__🚑_________________")
+        await e.edit("🚑___________________")
+        await e.edit("_____________________")
         await e.edit(choice(FACEREACTS))
 
 
@@ -1839,6 +1869,10 @@ CMD_HELP.update({
     "\nUsage: animasi bulan."
     f"\n\n>`{cmd}clock`"
     "\nUsage: animasi jam."
+    f"\n\n>`{cmd}muah`"
+    "\nUsage: animasi muah."
+    f"\n\n>`{cmd}lul`"
+    "\nUsage: animasi lul."
     f"\n\n>`{cmd}hi`"
     "\nUsage: Sapa semuanya!"
     f"\n\n>`{cmd}coinflip` <Kepala/Ekor>"
