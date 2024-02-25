@@ -87,14 +87,14 @@ async def _(ping):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     user = await ping.client.get_me()
-    await ping.client.send_message(
-        ping.chat_id, f"**╰•★★ |Ram Ping| ★★•╯**\n"
-                    f"★ **speed:** "
-                    f"`%sms` \n"
-                    f"★ **Uptime:** "
-                    f"`{uptime}` \n"
-                    f"★ **owner:** [{user.first_name}](tg://user?id={user.id})\n" % (duration), reply_to=ping.reply_to_msg_id)
-    await ping.delete()
+    await ping.reply(
+            f"**╰•⛧⛧ |Kane Ping| ⛧⛧•╯**\n"
+            f"⛧ **speed:** "
+            f"`%sms` \n"
+            f"⛧ **Uptime:** "
+            f"`{uptime}` \n"
+            f"⛧ **owner:** [{user.first_name}](tg://user?id={user.id})\n" % (duration)
+    )
 
 @ram_cmd(pattern="rping$")
 @register(pattern=r"^\.cping(?: |$)(.*)", sudo=True)
@@ -129,7 +129,7 @@ async def _(pong):
     duration = (end - start).microseconds / 1000
     user = await pong.client.get_me()
     await pong.client.send_message(
-        pong.chat_id, f"**🌟𝗥𝗔𝗠-𝗨𝗕𝗢𝗧🌟**\n"
+        pong.chat_id, f"**⛧𝗞𝗔𝗡𝗘-𝗨𝗕𝗢𝗧⛧**\n"
                      f"** ➠  Sɪɢɴᴀʟ   :** "
                      f"`%sms` \n"
                      f"** ➠  Bᴏᴛᴠᴇʀ  :** "
@@ -173,9 +173,10 @@ async def redis(pong):
     duration = (end - start).microseconds / 1000
     user= await pong.client.get_me()
     await pong.client.send_message(
-        pong.chat_id, f"**➾ OWNER      :** [{user.first_name}](tg://user?id={user.id}) \n"
+       pong.chat_id, f"**⛧𝗞𝗔𝗡𝗘-𝗨𝗕𝗢𝗧⛧**\n"
+                     f"**➾ OWNER     :** [{user.first_name}](tg://user?id={user.id}) \n"
                      f"**➾ Kecepatan : ** %sms  \n"
-                     f"**➾ Branch       : ** [{branch}] \n" % (duration), reply_to=pong.reply_to_msg_id) 
+                     f"**➾ Branch    : ** [{branch}] \n" % (duration), reply_to=pong.reply_to_msg_id) 
     await pong.delete()
 
 @ram_cmd(pattern="speed$")
