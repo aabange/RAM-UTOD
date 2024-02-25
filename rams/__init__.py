@@ -130,7 +130,7 @@ SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "").split()}
 BL_CHAT = {int(x) for x in os.environ.get("BL_CHAT", "").split()}
 
 #handler
-CMD_HANDLER = os.environ.get("CMD_HANDLER") or "✓"
+CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
 
 SUDO_HANDLER = os.environ.get("SUDO_HANDLER") or "?"
 
