@@ -32,13 +32,13 @@ async def _(e):
         sleep(1)
         await e.edit("KONTOL")
         sleep(1)
-        await e.edit("MEMEK")
+        await e.edit("ANJING")
         sleep(1)
         await e.edit("AKU DI GHOSTING")
         sleep(1)
         await e.edit("BANGSAT")
         sleep(1)
-        await e.edit("ANJING")
+        await e.edit("MONYED")
         sleep(1)
         await e.edit("😡😡😡")
         sleep(1)
@@ -162,12 +162,11 @@ async def _(event):
     if input_str == "owner":
         await event.edit(input_str)
         animation_chars = [
-            "**OWNER RAM-UBOT ADALAH MANUSIA TERGANTENG DI HATI PEMAKAI NYA, KENALAN DULU SAMA OWNER NYA YUK**"
-            "**RAMADHANI NAMANYA,ORANG NYA BAIK**"
-            "**TINGGAL NYA DI TANGERANG, BTW ORANG TANGERANG GANTENG GANTENG DAN THEBEST POKOK NYA AWWHHHH**"
-            "**KALO MAU FORK REPONYA,IZIN DULU KE ORANG NYA YA GENGSSS**"
-            "**POKOK NYA OWNER NYA THEBEST BANGET SERIUSSSSS**"
-            "**UDAH POKOK NYA ITU AJA SIH,INTINYA OWNER NYA GANTENG DAN BAIK PARAH**"]
+            "**OWNER KANE-UBOT ADALAH MANUSIA TERGANTENG DI HATI PEMAKAI NYA, KENALAN DULU SAMA OWNER NYA YUK**"
+            "**KANE NAMANYA, ORANG NYA BAIK**"
+            "**TINGGAL NYA DI PALEMBANG, BTW ORANG PALEMBANG GANTENG GANTENG DAN THEBEST POKOK NYA AWWHHHH**"
+            "**POKOK NYA OWNER NYA THE BEST BANGET SERIUSSSSS**"
+            "**UDAH POKOK NYA ITU AJA SIH, INTINYA OWNER NYA GANTENG DAN BAIK PARAH**"]
         for i in animation_ttl:
             await asyncio.sleep(animation_interval)
             await event.edit(animation_chars[i % 6])
