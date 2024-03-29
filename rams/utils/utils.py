@@ -10,8 +10,10 @@ from pathlib import Path
 from random import randint
 
 import heroku3
-from telethon.tl.functions.channels import CreateChannelRequest
 from telethon.tl.functions.contacts import UnblockRequest
+from telethon.tl.functions.channels import CreateChannelRequest, EditPhotoRequest
+from telethon.tl.types import ChatPhotoEmpty, InputChatUploadedPhoto
+from telethon.utils import get_peer_id
 
 from rams import (
     BOT_TOKEN,
@@ -32,22 +34,49 @@ else:
     app = None
 
 
-async def creatgr():
-    LOGS.info("LAGI GUA BIKININ GRUP BUAT LO NGENTOT LO KONTOL")
-    desc = "Group Log untuk ⭐RAM-UBOT⭐.\n\nJANGAN KELUAR LO MONYED NANTI CRASH!.\n\n✨ Powered By ~ @UserbotCh ✨"
+async def creategr():
+    LOGS.info("SEDANG MEMBUAT GROUP LOG ANDA")
+    if BOTLOG_CHATID and str(BOTLOG_CHATID).startswith("-100"):
+        return
+    y = []  # To Refresh private ids
+    async for x in bot.iter_dialogs():
+        y.append(x.id)
+    if BOTLOG_CHATID:
+        try:
+            await bot.get_entity(int("BOTLOG_CHATID"))
+            return
+        except BaseException:
+            del heroku_var["BOTLOG_CHATID"]
     try:
-        grup = await bot(
-            CreateChannelRequest(title="✨RAM UBOT✨ LOGS", about=desc, megagroup=True)
+        r = await bot(
+            CreateChannelRequest(
+                title="Kane Bot Lᴏɢs",
+                about="Created by @snipple\n Support: @ucelbotk",
+                megagroup=True,
+            ),
         )
-        grup_id = grup.chats[0].id
-    except Exception as e:
-        LOGS.error(str(e))
-        LOGS.warning(
-            "var BOTLOG_CHATID kamu belum di isi. Buatlah grup telegram dan masukan bot @MissRose_bot lalu ketik /id Masukan id grup nya di var BOTLOG_CHATID"
+    except BaseException:
+        LOGS.info(
+            "Terjadi kesalahan, Buat sebuah grup lalu isi id nya di config var BOTLOG_CHATID."
         )
-    if not str(grup_id).startswith("-100"):
-        grup_id = int(f"-100{str(grup_id)}")
-    heroku_var["BOTLOG_CHATID"] = grup_id
+        exit(1)
+    chat = r.chats[0]
+    channel = get_peer_id(chat)
+    if isinstance(chat.photo, ChatPhotoEmpty):
+        photo = await download_file(
+            "https://telegra.ph/file/1dc488f17d5db1683ea58.jpg",
+        )
+        ll = await bot.upload_file(photo)
+        try:
+            await bot(
+                EditPhotoRequest(int(channel), InputChatUploadedPhoto(ll))
+            )
+        except BaseException as er:
+            LOGS.exception(er)
+    if not str(chat.id).startswith("-100"):
+        heroku_var["BOTLOG_CHATID"] = f"-100{str(chat.id)}"
+    else:
+        heroku_var["BOTLOG_CHATID"] = str(chat.id)
 
 
 async def autobot():
